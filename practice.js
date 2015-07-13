@@ -83,11 +83,20 @@ console.log(backPack);
 
   var me = {
     name: "Mark",
-  }
+    age: 25,
+    height: 6,
+    gender: "Male",
+    married: "Yes",
+    eyeColor: "Blue",
+    hairColor: "Brown",
+}
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-  //Code Here
+  
+    for(var key in me) {
+      alert(me[key]);
+    }
 
 
 
@@ -99,11 +108,21 @@ console.log(backPack);
 
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
-  //Code Here
+ var album = {
+  baby: "3:30",
+  girl: "2:45",
+  what: "1:00",
+  is: "7:00",
+  up: ":35"
+ }
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
+
+  for (var key in album) {
+    alert(key, album[key]);
+  }
 
 
 
@@ -115,11 +134,22 @@ console.log(backPack);
 
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+  var states = {
+    utah: 4000000,
+    california: 20000000,
+    kansas: 5000000,
+    arizona: 8000000,
+    mexico: 435
+
+  }
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-  //Code Here
+for (var key in states) {
+  if (states[key] > 30000) {
+    alert(key);
+  }
+}
 
 
 
@@ -140,11 +170,17 @@ var user = {
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
+  for(var key in user) {
+    if(!user[key]) {
+      delete user[key];
+    }
+  }
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
+user.name = "Mark";
+user.username = "markkeysor",
 
 
 
@@ -168,11 +204,12 @@ var user = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+  user.name = "Tyler S. McGinnis";
+  user.username = "tyler.mcginnis@devmounta.in";
 
 //Now call the sayName method that's on the user object which will alert the users email
 
-  //Code Here
+  user.sayName();
 
 
 
@@ -184,17 +221,24 @@ var user = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+ var methodCollection = {}
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
-  //Code Here
+  methodCollection.alertHello = function() {
+    alert("hello");
+  }
+
+  methodCollection.logHello = function() {
+    console.log("hello");
+  }
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
+  methodCollection.alertHello();
+  methodCollection.logHello();
 
 
 
